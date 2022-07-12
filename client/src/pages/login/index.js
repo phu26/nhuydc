@@ -8,7 +8,7 @@ export default function Login() {
     const {isFetching} = false; 
     const dispatch = useDispatch();
     const handleclick = useCallback(() => {
-       
+       console.log("df");
         dispatch(getAuth.getAuthRequest());
         
        }, []);
