@@ -12,7 +12,7 @@ try {
     console.log("ok");
     var host = "https://partner.shopeemobile.com";
     var path = "/api/v2/shop/auth_partner";
-    var redirect_urt = "http://localhost:5000/";
+    var redirect_urt = "http://localhost:3000/";
     const date = new Date();
     let time = date.getTime()/1000;
     var timestampss = Math.floor(time);
