@@ -12,14 +12,14 @@ import {
 function App()
 {
 
-  const  user = "";
+  const  user = false;
   return(
     <Router>
         <Routes>
-        <Route exact path="/">
-          {user ? <HomePage /> : <Login />}
-        </Route>
-        <Route path="/login">{user ? <Navigate to="/" /> : <Login />}</Route>
+        <Route exact path="/"
+          element={user ? <HomePage /> : <Login />}
+        />
+        <Route path="/login" element={user ? <Navigate to="/" /> : <Login />}/>
      
       
       </Routes>
