@@ -22,7 +22,7 @@ try {
     var sign = signHmacSha512(partner_key,basestring);
     var link = host + path + `?partner_id=${partner_id}&timestamp=${timestampss}&sign=${sign}&redirect=${redirect_urt}`;
         console.log(link);
-        res.redirect(link);
+      
     
 } catch (error) {
     console.log("ok2");
