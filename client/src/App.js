@@ -1,6 +1,6 @@
 import HomePage from "./pages/HomePage"
 import Login from "./pages/login/index";
-
+import React,{useState,useEffect} from 'react';
 import {
   BrowserRouter as Router,
 
@@ -11,8 +11,17 @@ import {
 
 function App()
 {
-
-  const  user = false;
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+ 
+  const [user, setUser] = useState(null)
+  if(params.get('code') )
+  {
+    const foo = params.get('code');
+    console.log(foo);
+  
+  }
+  
   return(
     <Router>
         <Routes>

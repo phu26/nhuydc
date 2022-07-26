@@ -12,7 +12,10 @@ const URI = 'mongodb+srv://admin:phu1234@cluster0.9efe8.mongodb.net/?retryWrites
 
 app.use(bodyParser.json({limit: '30mb'}));
 app.use(bodyParser.urlencoded({extended:true,limit:'30mb'}));
-app.use(cors());
+app.use(cors({
+    origin: true ,
+ 
+  }));
 
 app.get('/',(req,res)=>{
     res.send("successfully");
